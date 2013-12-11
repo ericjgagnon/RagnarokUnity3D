@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fe91fe96a74faef41b061d45a87f2f1b
+labels:
+- scifi
+- sfx
+- bonus
+- extra
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

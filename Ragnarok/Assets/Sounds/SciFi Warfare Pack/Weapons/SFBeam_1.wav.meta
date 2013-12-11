@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 07a50b6eb571c954baec619d0e846b86
+labels:
+- long
+- beam
+- rifle
+- weapon
+AudioImporter:
+  serializedVersion: 4
+  format: -1
+  quality: -1
+  stream: 1
+  3D: 1
+  forceToMono: 0
+  useHardware: 0
+  loopable: 0
+  userData: 

@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyBehavior.js">
+    <Files>
+      <File FileName="Assets/Scripts/StoryScript.js" Line="44" Column="25" />
+      <File FileName="Assets/Scripts/EnemyBehavior.js" Line="71" Column="31" />
+      <File FileName="Assets/Scripts/PlayerController.js" Line="54" Column="3" />
+      <File FileName="Assets/Scripts/Opening.js" Line="33" Column="26" />
+      <File FileName="Assets/Scripts/GameOver.js" Line="20" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/PlayerController.js" line="2" />
+      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/EnemyBehavior.js" line="2" />
+      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Opening.js" line="2" />
+      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="2" />
+      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="54" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

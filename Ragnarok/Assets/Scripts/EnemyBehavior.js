@@ -1,12 +1,14 @@
 ﻿#pragma strict
 
 var myTransform : Transform;
+var enemyRespawnPoint : Transform;
 var ragnarok : PlayerController;
-var drood : EnemyBehavior;
 var target : Transform;
 var playerPos : Vector3;
+var lookDirection : Vector3;
+var randomPosition : Vector3;
+var lookRot : Quaternion;
 var eBullet : Rigidbody;
-var enemyRespawnPoint : Transform;
 var eSpawnPoint : Transform;
 var scoreText : GUIText;
 var winText : GUIText;
@@ -22,6 +24,7 @@ var move : boolean;
 
 function Start () {
 	myTransform = transform;
+	randomPosition = new Vector3(Random.Range(-23,23), 0.5, 9);
 	eHP = 8;
 	killed = 0;
 	score = 0;
@@ -34,14 +37,14 @@ function Start () {
 }
 
 function Update () {
-	
+
 	playerPos = target.position;
-	myTransform.position += myTransform.forward * speed * Time.deltaTime; 
-	var lookDirection : Vector3 = target.position - myTransform.position; 
-	var lookRot : Quaternion = Quaternion.LookRotation(lookDirection);
+	myTransform.position += myTransform.forward * speed * Time.deltaTime;
+	lookDirection = target.position - myTransform.position; 
+	lookRot = Quaternion.LookRotation(lookDirection);
+	
 	if(move){
 	myTransform.rotation = lookRot;
-
 	move = false;
 	lockOn();
 	}
@@ -67,12 +70,12 @@ function OnTriggerEnter(other : Collider){
 }
 function enemyStat(){
 	scoreText.text = "Score: "+ score;
-	if(eHP == 0){
-		gameObject.SetActive(false);
+	if(eHP == 0 && killed != 2){
 		AudioSource.PlayClipAtPoint(boom, myTransform.position);
 		killed++;
 		respawn();
 	}if(killed == 2){
+		Destroy(gameObject);
 		winText.text = "Victory!!!\n"
 	 						+"Press UP to go to the title screen";
 	 	ragnarok.done = true;
@@ -83,9 +86,8 @@ function lockOn(){
 	move = true;
 }
 function respawn(){
-	gameObject.transform.position = enemyRespawnPoint.position;
-	gameObject.SetActive(true);
-	
+	myTransform.position = randomPosition;
+	eHP = 8;
 }
 	
 		

@@ -5,6 +5,7 @@ var speed : float;
 var bulletPrefab : Rigidbody;
 var spawnPoint : Transform;
 var fireSound : AudioClip;
+var explode : AudioClip;
 var hpText : GUIText;
 var escText : GUIText;
 var done : boolean;
@@ -59,8 +60,12 @@ function OnTriggerEnter(other : Collider){
 		hp = hp - 1;
 		SetStatus();
 	}
+	if(other.gameObject.tag == ("Enemy")){
+		hp = 0;
+	}
 	if(hp == 0){
 	Destroy(gameObject);
+	AudioSource.PlayClipAtPoint(explode, transform.position);
 	Application.LoadLevel(3);
 	}
 }

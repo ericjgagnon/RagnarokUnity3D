@@ -4,8 +4,11 @@ var story : GUIText;
 var start : GUIText;
 var showText : boolean;
 
+
+
 function Start () {
 	Time.timeScale = 1;
+	
 	story.text = "In the year 4665, the human race has left Earth in\n"
 				+ "search of habitable panet to live on. While searching\n"
 				+ "for a new home the fleet of ships encountered a\n"
@@ -25,6 +28,7 @@ function Start () {
 function Update () {
 
 	if(Input.GetKeyDown(KeyCode.UpArrow)){
+		Destroy(GameObject.Find("ThemeHolder"));
 		Application.LoadLevel(2);
 	}
 }

@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyBehavior.js">
     <Files>
-      <File FileName="Assets/Scripts/StoryScript.js" Line="44" Column="25" />
-      <File FileName="Assets/Scripts/EnemyBehavior.js" Line="90" Column="10" />
-      <File FileName="Assets/Scripts/PlayerController.js" Line="68" Column="59" />
-      <File FileName="Assets/Scripts/Opening.js" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/OpeningTheme.js" Line="6" Column="12" />
+      <File FileName="Assets/Scripts/EnemyBehavior.js" Line="32" Column="20" />
+      <File FileName="Assets/Scripts/StoryScript.js" Line="31" Column="43" />
+      <File FileName="Assets/Scripts/PlayerController.js" Line="33" Column="73" />
+      <File FileName="Assets/Scripts/Opening.js" Line="12" Column="66" />
       <File FileName="Assets/Scripts/GameOver.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -16,7 +17,10 @@
       <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Opening.js" line="2" />
       <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="2" />
       <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="54" />
-      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="2" />
+      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="6" />
+      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/StoryScript.js" line="3" />
+      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/OpeningTheme.js" line="3" />
+      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/OpeningTheme.js" line="2" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

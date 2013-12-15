@@ -8,6 +8,7 @@ var startPosition : Vector3;
 var startRotation : Quaternion;
 var fireSound : AudioClip;
 var explode : AudioClip;
+var explodeFX : GameObject;
 var hpText : GUIText;
 var livesText : GUIText;
 var escText : GUIText;
@@ -50,6 +51,9 @@ function Update(){
 	if(done && Input.GetKeyDown(KeyCode.UpArrow)){
 		Application.LoadLevel(0);
 	}
+	if(done && Input.GetKeyDown(KeyCode.DownArrow)){
+		Application.LoadLevel(2);
+	}
 	if(Input.GetKeyDown(KeyCode.P)){
 		pause();
 		isPaused = !isPaused;
@@ -65,11 +69,31 @@ function OnTriggerEnter(other : Collider){
 		hp = hp - 1;
 		SetStatus();
 	}
+	if(other.gameObject.tag == ("HPup")){
+		Destroy(other.gameObject);
+		if(drood.killed != drood.enemyNum){
+		drood.winText.text = "HP + 1";
+		yield WaitForSeconds(.5);
+		drood.winText.text = "";
+		}
+		hp = hp + 1;
+		SetStatus();
+	}
+	if(other.gameObject.tag == ("Spdup")){
+		Destroy(other.gameObject);
+		if(drood.killed != drood.enemyNum){
+		drood.winText.text = "Speed Up";
+		yield WaitForSeconds(.5);
+		drood.winText.text = "";
+		}
+		speed = speed + 10;
+	}
 	if(other.gameObject.tag == ("Enemy")){
 		hp = 0;
 	}
 	if(hp == 0){
 	AudioSource.PlayClipAtPoint(explode, transform.position);
+	Instantiate(explodeFX, transform.position, transform.rotation);
 	lives = lives - 1;
 	SetStatus();
 		if(lives > -1){

@@ -31,7 +31,7 @@ function flashLabel(){
 }
 function showText(){
 	if(displayText == true){
-		prompt.text = "Press UP to play";
+		prompt.text = "PRESS UP TO PLAY";
 	}else{
 		prompt.text = "";
 	}

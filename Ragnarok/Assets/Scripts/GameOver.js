@@ -2,8 +2,10 @@
 
 var gOverText : GUIText;
 var promptText : GUIText;
+var gameOver : AudioClip;
 
 function Start () {
+	audio.PlayOneShot(gameOver);
 	gOverText.text = "Game Over!";
 	promptText.text = "Press UP to try again or ESC to quit";
 

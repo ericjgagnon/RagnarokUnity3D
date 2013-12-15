@@ -6,18 +6,22 @@ var target : Transform;
 var playerPos : Vector3;
 var lookDirection : Vector3;
 var randomPosition : Vector3;
+var boomFX : GameObject;
 var lookRot : Quaternion;
 var eBullet : Rigidbody;
 var eSpawnPoint : Transform;
+var hpPowerUp : Rigidbody;
+var speedPUP : Rigidbody;
 var scoreText : GUIText;
 var winText : GUIText;
 var lSound : AudioClip;
 var boom : AudioClip;
 private var eHP : int;
 private var score : int;
+var enemyNum : int;
 var speed : float;
-var delay : float;
-private var killed : int;
+var delay : float; 
+var killed : int;
 var shoot : boolean;
 var move : boolean;
 
@@ -27,6 +31,7 @@ function Start () {
 	eHP = 8;
 	killed = 0;
 	score = 0;
+	enemyNum = 11;
 	scoreText.text = "";
 	enemyStat();
 	winText.text = "";
@@ -44,7 +49,6 @@ function Update () {
 	myTransform.rotation = lookRot;
 
 	if(move){
-	
 	move = false;
 	lockOn();
 	}
@@ -72,15 +76,27 @@ function OnTriggerEnter(other : Collider){
 	}
 }
 function enemyStat(){
+	var pUPChooser = Random.Range(1, 3);
+	
 	scoreText.text = "Score: "+ score;
-	if(eHP == 0 && killed != 3){
+	
+	if(eHP == 0 && killed != enemyNum){
 		AudioSource.PlayClipAtPoint(boom, myTransform.position);
+		Instantiate(boomFX, transform.position, transform.rotation);
+		if(pUPChooser == 1){
+		var hpUP : Rigidbody = Instantiate(hpPowerUp, eSpawnPoint.position, eSpawnPoint.rotation);
+		hpUP.AddForce(-Vector3.forward * 500);
+		}else if(pUPChooser == 2){
+		var spdUP : Rigidbody = Instantiate(speedPUP, eSpawnPoint.position, eSpawnPoint.rotation);
+		spdUP.AddForce(-Vector3.forward * 500);
+		}
+		
 		killed++;
 		respawn();
-	}if(killed == 3){
+	}if(killed == enemyNum){
 		Destroy(gameObject);
-		winText.text = "Victory!!!\n"
-	 						+"Press UP to go to the title screen";
+		winText.text = "VICTORY!!!\n"
+	 						+"Press UP to go to the title screen\nor DOWN to play again";
 	 	ragnarok.done = true;
 	 	}
 }

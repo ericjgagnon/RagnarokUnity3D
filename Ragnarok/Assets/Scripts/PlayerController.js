@@ -90,6 +90,8 @@ function OnTriggerEnter(other : Collider){
 	}
 	if(other.gameObject.tag == ("Enemy")){
 		hp = 0;
+		drood.eHP = 0;
+		drood.enemyStat();
 	}
 	if(hp == 0){
 	AudioSource.PlayClipAtPoint(explode, transform.position);

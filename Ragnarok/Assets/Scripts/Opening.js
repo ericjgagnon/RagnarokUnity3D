@@ -9,7 +9,7 @@ var displayText : boolean;
 function Start () {
 	Time.timeScale = 1;
 	write.text ="Ragnarok";
-	control.text = "Use arrows to control ship along x-axis, X and C to rotate left and right, \npress space to fire, and P to pause";
+	control.text = "Use arrows to control ship along x-axis, \nX and C to rotate left and right, \npress space to fire, and P to pause";
 	flashLabel();
 	
 }

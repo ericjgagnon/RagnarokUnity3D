@@ -16,7 +16,7 @@ var scoreText : GUIText;
 var winText : GUIText;
 var lSound : AudioClip;
 var boom : AudioClip;
-private var eHP : int;
+var eHP : int;
 private var score : int;
 var enemyNum : int;
 var speed : float;
@@ -27,7 +27,7 @@ var move : boolean;
 
 function Start () {
 	myTransform = transform;
-	randomPosition = new Vector3(Random.Range(-23,23), 0.5, 9);
+	randomPosition = new Vector3(Random.Range(-23,23), 0.5, 16);
 	eHP = 8;
 	killed = 0;
 	score = 0;
@@ -74,7 +74,7 @@ function OnTriggerEnter(other : Collider){
 		score = score + 5;
 		enemyStat();
 	}
-}
+}	
 function enemyStat(){
 	var pUPChooser = Random.Range(1, 3);
 	

@@ -49,7 +49,8 @@ function Update(){
 		audio.PlayOneShot(fireSound);
 	}
 	if(done && Input.GetKeyDown(KeyCode.UpArrow)){
-		Application.LoadLevel(0);
+		Application.LoadLevel(3);
+		
 	}
 	if(done && Input.GetKeyDown(KeyCode.DownArrow)){
 		Application.LoadLevel(2);
@@ -102,7 +103,7 @@ function OnTriggerEnter(other : Collider){
 			Respawn();
 		}else{
 		Destroy(gameObject);
-		Application.LoadLevel(3);
+		Application.LoadLevel(4);
 		}
 	}
 }
@@ -128,5 +129,3 @@ function Respawn(){
 	hp = 5;
 	SetStatus();
 }
-
-	

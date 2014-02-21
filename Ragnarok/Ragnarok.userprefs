@@ -1,29 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.js">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../tetris-unity-master/Assets/Scripts/MatchCamera.cs">
     <Files>
-      <File FileName="Assets/Scripts/EnemyBehavior.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.js" Line="24" Column="21" />
-      <File FileName="Assets/Scripts/BulletDestruction.js" Line="6" Column="25" />
-      <File FileName="Assets/Scripts/OpeningTheme.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/StoryScript.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Opening.js" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameOver.js" Line="1" Column="1" />
+      <File FileName="../../tetris-unity-master/Assets/Scripts/Tetrimo.cs" Line="220" Column="74" />
+      <File FileName="../../tetris-unity-master/Assets/Scripts/FourLinesLabel.cs" Line="20" Column="18" />
+      <File FileName="../../tetris-unity-master/Assets/Scripts/HighScore.cs" Line="20" Column="6" />
+      <File FileName="../../tetris-unity-master/Assets/Scripts/MatchCamera.cs" Line="39" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/PlayerController.js" line="2" />
-      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/EnemyBehavior.js" line="2" />
-      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Opening.js" line="2" />
-      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="2" />
-      <Breakpoint file="/Users/egagnon/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="54" />
-      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/EnemyBehavior.js" line="8" />
-      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/StoryScript.js" line="3" />
-      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/OpeningTheme.js" line="3" />
-      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/OpeningTheme.js" line="2" />
-      <Breakpoint file="/Users/egagnon/RagnarokUnity3D/Ragnarok/Assets/Scripts/PlayerController.js" line="4" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
